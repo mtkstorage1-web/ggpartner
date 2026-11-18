@@ -2517,3 +2517,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .view:has(>.list) .row .last{max-width:68ch;line-height:1.45}
 .view:has(>.list) .row .when{padding-top:3px;font-variant-numeric:tabular-nums}
 @media(max-width:520px){.view:has(>.list) .row{padding:11px 12px}.view:has(>.list) .row .when{font-size:10px}}
+
+/* Prompt 11 — make conversations easier to follow and compose. */
+.chat{border:1px solid var(--border);background:color-mix(in srgb,var(--surface) 76%,transparent);box-shadow:var(--shadow-sm)}
+.chat .head{position:sticky;top:0;z-index:3;padding:14px 18px}
+.thread{gap:12px;padding:22px clamp(14px,4vw,28px)}
+.bubble{max-width:min(78%,560px);padding:11px 14px;line-height:1.55}
+.composer{position:sticky;bottom:0;gap:10px;padding:12px clamp(12px,3vw,20px) max(12px,env(safe-area-inset-bottom));}
+@media(max-width:520px){.bubble{max-width:88%}.chat{height:calc(100dvh - var(--tabbar-h) - 24px)}}
