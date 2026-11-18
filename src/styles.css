@@ -2616,3 +2616,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 #how .lsteps .n{font-size:14px}
 #how .lsteps b{color:var(--text)}
 #how .lsteps p{color:var(--muted)}
+
+/* Prompt 24 — make the existing Google sign-in action easy to find. */
+#gate .gbtn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:52px;font-size:15px;font-weight:750;box-shadow:0 8px 24px -16px var(--accent)}
+#gate .gbtn:hover{transform:translateY(-1px);box-shadow:var(--glow)}
+#gate .gbtn:disabled{opacity:.7;cursor:wait;transform:none}
+#gate .ghost{min-height:42px}
