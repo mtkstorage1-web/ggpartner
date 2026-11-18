@@ -2455,3 +2455,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .person .meta span{display:inline-flex;align-items:center;gap:5px}
 .person .headline{font-size:14px;line-height:1.45}
 @media(max-width:620px){.people .person{gap:12px;padding:14px}.people .pres .avatar{width:76px!important;height:76px!important;font-size:26px!important}.person .acts{gap:7px}}
+
+/* Prompt 03 — make match explanations visible beside the score. */
+.match-reasons{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.match-reason{display:inline-flex;align-items:center;gap:5px;padding:4px 8px;border:1px solid var(--person-chip-border);background:var(--person-chip);color:var(--person-sub);font-size:11px;font-weight:650;line-height:1.35}
+.match-reason.good{color:var(--like);border-color:color-mix(in srgb,var(--like) 32%,var(--person-chip-border))}
+.match-reason .ic{width:12px;height:12px}
+@media(max-width:560px){.match-reasons{gap:4px}.match-reason{font-size:10px;padding:3px 6px}}

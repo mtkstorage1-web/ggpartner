@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
 "use strict";
 
 /* ==================================================================
@@ -866,6 +866,15 @@ function scoreBadgeHTML(p) {
     '<b class="num">' + s.pct + '%</b> match</span>';
 }
 
+function matchReasonsHTML(p) {
+  var why = matchScore(p).why || [];
+  if (!why.length) return "";
+  return '<div class="match-reasons" aria-label="Why this match fits">' +
+    why.map(function (reason) {
+      return '<span class="match-reason ' + (reason.good ? 'good' : 'weak') + '">' +
+        ic(reason.good ? 'check' : 'circle-x') + esc(reason.text) + '</span>';
+    }).join("") + '</div>';
+}
 function ic(name, cls) {
   return '<svg class="ic' + (cls ? ' ' + cls : '') + '" aria-hidden="true">' +
     '<use href="#i-' + name + '"></use></svg>';
@@ -1604,6 +1613,7 @@ function personRowHTML(raw) {
         catBadgesHTML(raw, p) +
       '</div>' +
       detailPillHTML(p) +
+      (!mine ? matchReasonsHTML(p) : '') +
       '<div class="meta">' +
         /* "0.0 km away" from yourself reads as a bug, so your own card
            just says where you are. */
