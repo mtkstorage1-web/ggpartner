@@ -2814,3 +2814,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .composer .send{width:46px;height:46px;flex:none;box-shadow:0 4px 12px -8px var(--accent)}
 .composer .send:focus-visible{outline-offset:3px}
 @media(max-width:480px){.composer{padding-inline:10px}.composer .send{width:42px;height:42px}}
+
+/* Prompt 55 — make recorded audio controls easier to operate. */
+.bubble.isvoice{min-width:min(260px,80vw);padding:12px 14px}
+.voice{gap:12px;min-width:min(220px,68vw)}
+.vplay{width:40px;height:40px;border:2px solid currentColor}
+.vwave{height:32px;gap:3px}
+.vtime{font-variant-numeric:tabular-nums;font-weight:700}
