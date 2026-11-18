@@ -2451,7 +2451,9 @@ function detailModal(id) {
         '<div class="dtop" style="background:linear-gradient(150deg,' + colour + '22,' + colour + '55)">' +
           avatarFor(p, 64) +
           '<div>' +
-            '<div class="dbadges">' +
+            '<div class="profile-progress"><div class="progress-head"><span>Profile basics</span><b>' + complete + ' of 4</b></div>' +
+        '<div class="progress-track" role="progressbar" aria-valuenow="' + complete + '" aria-valuemin="0" aria-valuemax="4"><i style="width:' + pct + '%"></i></div>' +
+        '<small>Name, city, about, and an activity profile</small></div>' +      '<div class="dbadges">' +
               verifiedHTML(p) +
               (isActiveNow(p) ? '<span class="catbadge" style="color:var(--like)">' + ic('circle-dot') + ' Active now</span>' : '') +
               (matched ? '<span class="catbadge" style="color:var(--accent-ink)">' + ic('arrow-left-right') + ' Matched</span>' : '') +
@@ -3663,6 +3665,8 @@ function viewProfile() {
   /* One profile per category: add, edit, delete. */
   var mine = me.profiles || {};
   var used = Object.keys(mine);
+  var complete = [!!me.name, !!me.city, !!me.bio, !!used.length].filter(Boolean).length;
+  var pct = Math.round(complete / 4 * 100);
   var free = CATEGORIES.filter(function (c) {
     return c.slug !== "all" && used.indexOf(c.slug) === -1;
   });
@@ -3710,7 +3714,9 @@ function viewProfile() {
       '<div><h3 style="text-transform:none;letter-spacing:-.3px;font-size:18px;color:var(--text)">' +
         esc(me.name) + ', ' + esc(me.age) + '</h3>' +
         '<p style="color:var(--faint);font-size:12.5px;margin-top:3px">' + ic('map-pin') + ' ' + esc(me.city) + '</p></div>' +
-      '<div class="dbadges" style="justify-content:center">' +
+      '<div class="profile-progress"><div class="progress-head"><span>Profile basics</span><b>' + complete + ' of 4</b></div>' +
+        '<div class="progress-track" role="progressbar" aria-valuenow="' + complete + '" aria-valuemin="0" aria-valuemax="4"><i style="width:' + pct + '%"></i></div>' +
+        '<small>Name, city, about, and an activity profile</small></div>' +      '<div class="dbadges" style="justify-content:center">' +
         (me.phoneVerified
           ? '<span class="vbadge">' + ic("shield-check") + 'Verified</span>'
           : '<button class="vbadge no" data-act="verifyphone" style="cursor:pointer">' +
