@@ -2695,3 +2695,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .person .meta .ic{flex:none}
 .person .meta{row-gap:7px;column-gap:14px}
 .person .meta span{padding:2px 0}
+
+/* Prompt 36 — group category details for faster card scanning. */
+.person .tags{gap:6px;margin-top:2px}
+.person .tag{font-size:11px;line-height:1.4}
+.person .gstrip{display:flex;align-items:center;gap:7px;padding:7px 9px;background:var(--person-chip);border-left:2px solid var(--accent-border)}
+.person .detailpill{padding:8px 10px;background:var(--person-chip);border:1px solid var(--person-chip-border)}
