@@ -2748,3 +2748,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .drow1 .search .mag{left:13px;display:grid;place-items:center;width:18px;height:18px}
 .drow1 .sort,.drow1 .sel{min-height:42px}
 .drow1 .search input::-webkit-search-cancel-button{cursor:pointer}
+
+/* Prompt 44 — improve the selected-member popup on the map. */
+.leaflet-popup-content-wrapper{border:1px solid var(--border-strong);box-shadow:var(--shadow-lg)}
+.leaflet-popup-content{margin:13px 15px;line-height:1.5}
+.iw{min-width:190px;max-width:260px}
+.iw .iwtop{align-items:center;padding-bottom:8px;border-bottom:1px solid #e5e7eb}
+.iw .btns{margin-top:10px;gap:8px}
+.iw button{min-height:36px}
