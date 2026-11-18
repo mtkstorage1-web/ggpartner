@@ -3048,3 +3048,9 @@ html,body{max-width:100%;overflow-x:hidden}
 .avatar{display:inline-grid;place-items:center;flex:none;overflow:hidden;background-color:var(--surface-3);color:var(--text)}
 img.avatar.photo{object-fit:cover;background:var(--surface-3);color:transparent}
 .avatar:not(img){font-weight:800;letter-spacing:.02em}
+
+/* Prompt 99 — use shared theme surfaces in remaining controls. */
+:root[data-theme=light] :where(.mapstyle,.leaflet-control-zoom a){--control-surface:#fff}
+:root[data-theme=dark] :where(.mapstyle,.leaflet-control-zoom a){--control-surface:var(--surface)}
+:root[data-theme=light] .mapstyle,:root[data-theme=dark] .mapstyle{border-color:var(--border-strong)}
+:where(.field input,.field textarea,.field select,.search input,.composer input){color:var(--text);background-color:var(--surface-2)}
