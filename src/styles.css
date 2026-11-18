@@ -2580,3 +2580,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 :root[data-theme=light] .sidenav,:root[data-theme=light] .tabbar{background:color-mix(in srgb,var(--surface) 94%,#e9edfa)}
 :root[data-theme=light] .person{box-shadow:0 4px 18px rgba(38,46,66,.06)}
 :root[data-theme=light] .empty{background:color-mix(in srgb,var(--surface) 88%,var(--bg))}
+
+/* Prompt 19 — clarify modal structure and action priority. */
+.scrim{padding:18px;backdrop-filter:blur(7px)}
+.modal{width:min(100%,560px);max-height:min(90dvh,820px);overflow:auto;border:1px solid var(--border-strong);box-shadow:0 28px 90px rgba(0,0,0,.4)}
+.modal .pehead{position:sticky;top:-1px;z-index:2;padding:2px 0 12px;background:var(--surface);border-bottom:1px solid var(--border)}
+.modal .pefoot{display:flex;gap:9px;justify-content:flex-end;padding-top:13px;margin-top:14px;border-top:1px solid var(--border)}
+.modal .pefoot .btn.primary{min-width:120px}
+@media(max-width:520px){.scrim{padding:10px}.modal{max-height:94dvh}.modal .pefoot{position:sticky;bottom:0;background:var(--surface)}}
