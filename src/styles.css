@@ -2858,3 +2858,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .evcard .evtop{display:flex;align-items:flex-start;gap:12px}
 .evcard .evmain{min-width:0;flex:1}
 .evcard .evmain>b{font-size:15px;line-height:1.4}
+
+/* Prompt 62 — make event setup fields easier to complete. */
+.modal:has(#ev-title),.modal:has(#event-title){width:min(100% - 20px,680px)}
+.modal:has([data-evcreate]) .pebody,.modal:has(#ev-title) .pebody{display:grid;gap:13px}
+.modal:has([data-evcreate]) .field,.modal:has(#ev-title) .field{margin-bottom:0}
+.modal .field :where(input,select,textarea){min-height:42px}
