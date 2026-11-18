@@ -2648,3 +2648,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .toast.show{animation:toast-in .22s steps(4,end)}
 @keyframes toast-in{from{transform:translate(-50%,8px);opacity:.4}to{transform:translate(-50%,0);opacity:1}}
 @media(prefers-reduced-motion:reduce){.toast.show{animation:none}}
+
+/* Prompt 29 — make loading states quiet and recognizable. */
+.empty:has(h3:first-of-type){min-height:170px}
+.empty:has(.ic use[href="#i-hourglass"]) .big{animation:load-pulse 1.4s steps(3,end) infinite}
+@keyframes load-pulse{50%{opacity:.55;transform:translateY(-2px)}}
+.syncdot{padding:4px 8px;background:var(--like-soft);border:1px solid color-mix(in srgb,var(--like) 28%,var(--border));font-weight:650}
+@media(prefers-reduced-motion:reduce){.empty:has(.ic use[href="#i-hourglass"]) .big{animation:none}}
