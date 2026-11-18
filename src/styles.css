@@ -2910,3 +2910,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .evcard .evtop,.evcard .evmeta,.evcard .evwho,.evcard .evslots{min-width:0}
 .evcard .evmain small{display:block;line-height:1.5;color:var(--muted)}
 .evcard .evtop>.evphase{flex:none}
+
+/* Prompt 71 — separate selected destinations from hover and keyboard focus. */
+.navlink[aria-current=page]{outline:0;background:var(--accent-soft);color:var(--accent-ink)}
+.navlink[aria-current=page] .ico{color:var(--accent-ink)}
+.navlink:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.navlink[aria-current=page]:focus-visible{box-shadow:inset 3px 0 var(--accent),0 0 0 2px var(--ring)}
