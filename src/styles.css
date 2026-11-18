@@ -2851,3 +2851,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .chat .reccard{border-left:3px solid var(--pass);line-height:1.45}
 .chat .composer input:disabled{opacity:.6;cursor:not-allowed}
 .chat .composer .send:disabled{opacity:.5;cursor:not-allowed;box-shadow:none}
+
+/* Prompt 61 — make event listings easier to scan by time and capacity. */
+.discover .people:has(.evcard){gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.discover .evcard{min-height:230px;padding:18px;gap:13px}
+.evcard .evtop{display:flex;align-items:flex-start;gap:12px}
+.evcard .evmain{min-width:0;flex:1}
+.evcard .evmain>b{font-size:15px;line-height:1.4}
