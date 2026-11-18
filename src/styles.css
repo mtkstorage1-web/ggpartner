@@ -2988,3 +2988,6 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .navlink:focus-visible,.railbtn:focus-visible,.chip:focus-visible{position:relative;z-index:4}
 .modal :focus-visible{outline-offset:2px}
 a:not([href]),button:not(:disabled){touch-action:manipulation}
+
+/* Prompt 86 — remove decorative motion when reduced motion is requested. */
+@media(prefers-reduced-motion:reduce){.lshot-card,.leyebrow .pulse,.callkey.yes,.leaflet-marker-icon,.modal{animation:none!important;scroll-behavior:auto!important}.card:hover,.lcat:hover,.lfacts li:hover,.stat:hover{transform:none!important}}
