@@ -2756,3 +2756,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .iw .iwtop{align-items:center;padding-bottom:8px;border-bottom:1px solid #e5e7eb}
 .iw .btns{margin-top:10px;gap:8px}
 .iw button{min-height:36px}
+
+/* Prompt 45 — keep member pins legible over both map styles. */
+#map .leaflet-marker-icon{filter:drop-shadow(0 2px 3px rgba(0,0,0,.48));transition:filter .15s ease,transform .15s ease}
+#map .leaflet-marker-icon:hover{filter:drop-shadow(0 3px 6px rgba(0,0,0,.6));transform:translateY(-2px)}
+#map .leaflet-marker-icon:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+#map.sat .leaflet-marker-icon{filter:drop-shadow(0 0 4px rgba(0,0,0,.8))}
+@media(prefers-reduced-motion:reduce){#map .leaflet-marker-icon{transition:none}}
