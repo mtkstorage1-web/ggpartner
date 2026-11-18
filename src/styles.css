@@ -2727,3 +2727,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .namebtn+.vbadge{flex:none}
 .vbadge.no{border-style:dashed}
 .vbadge:focus-visible{outline-offset:3px}
+
+/* Prompt 41 — group related search and filter controls. */
+.dsearch{gap:14px;padding:16px;border-left:3px solid var(--accent-border)}
+.drow1{align-items:stretch;gap:8px}
+.drow1>.chip{min-height:38px}
+.fgrid{padding-top:12px;border-top:1px solid var(--border)}
+.fctl>span{letter-spacing:.08em}
