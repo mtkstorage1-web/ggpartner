@@ -2807,3 +2807,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .bubble .tick.got{opacity:.9;color:var(--person-sub)}
 .bubble .tick.seen{font-weight:800;color:var(--accent-ink)}
 .bubble .t{font-variant-numeric:tabular-nums}
+
+/* Prompt 54 — keep the composer comfortable on touch screens. */
+.composer{align-items:center;gap:8px}
+.composer input{min-width:0;min-height:46px;padding-inline:14px}
+.composer .send{width:46px;height:46px;flex:none;box-shadow:0 4px 12px -8px var(--accent)}
+.composer .send:focus-visible{outline-offset:3px}
+@media(max-width:480px){.composer{padding-inline:10px}.composer .send{width:42px;height:42px}}
