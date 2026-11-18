@@ -2928,3 +2928,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .notif .nt{font-size:12px;line-height:1.45}
 .notif .nb{white-space:normal;line-height:1.45}
 @media(max-width:520px){.notif{top:8px;max-width:calc(100vw - 18px)}}
+
+/* Prompt 75 — keep success feedback short and easy to catch. */
+.toast{z-index:1600;letter-spacing:.01em}
+.toast.show{border-left-color:var(--like)}
+.toast:empty{display:none}
+@media(max-width:560px){.toast{bottom:calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 12px);font-size:12px}}
