@@ -2533,3 +2533,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .profgrid .stats{gap:8px}
 .profgrid .stat{border:1px solid var(--border);padding:13px 8px}
 @media(max-width:819px){.profgrid{gap:12px}.profgrid>.panel{padding:15px}}
+
+/* Prompt 13 — give longer profile forms clearer rhythm. */
+.modal.profedit{max-height:min(88dvh,780px);overflow:auto;overscroll-behavior:contain}
+.modal.profedit .field{margin-bottom:15px}
+.modal.profedit .field label{font-size:12px;letter-spacing:.02em}
+.modal.profedit input,.modal.profedit select,.modal.profedit textarea{min-height:42px}
+.modal.profedit textarea{line-height:1.55}
+.modal.profedit .pefoot,.modal.profedit .actions{position:sticky;bottom:-1px;background:var(--surface);padding-top:10px}
