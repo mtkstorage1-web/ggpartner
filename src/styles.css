@@ -2945,3 +2945,6 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .view .btn.danger,.modal .btn.danger{color:var(--pass);border-color:color-mix(in srgb,var(--pass) 42%,var(--border))}
 .view .btn:not(.primary):not(.danger){background:var(--surface);border-color:var(--border-strong)}
 .view .btn.sm{min-height:36px}
+
+/* Prompt 78 — make small actions easier to tap. */
+@media(pointer:coarse){.icobtn,.roundbtn{min-width:42px;min-height:42px}.daypick button,.chip,.railbtn{min-height:42px}.navlink{min-height:46px}.callkey{min-width:58px;min-height:58px}}
