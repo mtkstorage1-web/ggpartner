@@ -2558,3 +2558,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .lbtns .btn.primary{min-height:50px;box-shadow:0 8px 24px -12px var(--accent)}
 .lshot-card{transform:rotate(-1deg)}
 @media(max-width:900px){#landing h1{max-width:16ch}}
+
+/* Prompt 16 — strengthen current-page and badge visibility. */
+.navlink{min-height:44px;gap:11px;transition:background .16s ease,color .16s ease,border-color .16s ease}
+.navlink[aria-current=page]{font-weight:750;box-shadow:inset 3px 0 0 var(--accent)}
+.navlink .count{min-width:21px;height:21px;display:grid;place-items:center;margin-left:auto;font-variant-numeric:tabular-nums}
+.tabbar .navlink{min-height:52px}
+.tabbar .navlink[aria-current=page]{box-shadow:none}
+.tabbar .navlink:focus-visible{outline-offset:-3px}
