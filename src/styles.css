@@ -2714,3 +2714,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .photopick .avatar,.avatar.photo{border:2px solid var(--border-strong);object-fit:cover}
 .photopick .btn{min-height:38px}
 .photopick input[type=file]{max-width:100%;font-size:11px}
+
+/* Prompt 39 — make profile links easier to recognize and open. */
+.clinks{display:flex;flex-wrap:wrap;gap:8px}
+.clink{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:7px 10px;border:1px solid var(--border-strong);background:var(--surface-2);font-size:11.5px;font-weight:700}
+.clink:not(.off):hover{border-color:var(--accent-border);background:var(--accent-soft);color:var(--accent-ink)}
+.clink.off{opacity:.62;cursor:default}
