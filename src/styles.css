@@ -3017,3 +3017,9 @@ html,body{max-width:100%;overflow-x:hidden}
 
 /* Prompt 92 — use tablet width without stretching content too far. */
 @media(min-width:700px) and (max-width:1100px){.profgrid{grid-template-columns:minmax(230px,.75fr) minmax(0,1.25fr)}.view .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dscroll{max-width:100%}.mapwrap{max-width:100%}}
+
+/* Prompt 93 — break long profiles into comfortable reading groups. */
+.person .bionote{max-width:70ch;line-height:1.65;white-space:pre-line}
+.person .who{max-width:100%}
+.profgrid .panel>p{max-width:68ch;line-height:1.7}
+.proflist{gap:9px}
