@@ -2821,3 +2821,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .vplay{width:40px;height:40px;border:2px solid currentColor}
 .vwave{height:32px;gap:3px}
 .vtime{font-variant-numeric:tabular-nums;font-weight:700}
+
+/* Prompt 56 — make voice call actions legible and touch friendly. */
+.callbox{width:min(100% - 24px,480px);padding:28px 22px;border:1px solid var(--border-strong)}
+.callacts{gap:24px;margin:24px 0 16px}
+.callkey{width:58px;height:58px;border:2px solid color-mix(in srgb,var(--text) 16%,transparent)}
+.callkey.no{width:62px;height:62px}
+.callkey:focus-visible{outline-offset:4px}
