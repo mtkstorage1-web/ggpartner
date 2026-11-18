@@ -2954,3 +2954,7 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .empty:has(.ic use[href="#i-hourglass"]) .big{margin-bottom:12px}
 .empty:has(.ic use[href="#i-hourglass"]) h3{color:var(--muted)}
 @media(prefers-reduced-motion:reduce){.syncdot i,.typing i{animation:none}}
+
+/* Prompt 80 — keep motion optional and transitions brief. */
+:where(.card,.panel,.btn,.actbtn,.navlink,.row){transition-duration:.16s}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
