@@ -3036,3 +3036,10 @@ html,body{max-width:100%;overflow-x:hidden}
 @media(max-height:620px){.scrim{align-items:flex-start;overflow-y:auto}.modal{max-height:calc(100dvh - 20px);margin:auto 0}.modal .pehead{top:-1px}.modal .pefoot{bottom:-1px}}
 .modal .pehead{display:flex;align-items:center;gap:12px}
 .modal .pehead h2{min-width:0;flex:1}
+
+/* Prompt 97 — provide a compact card variant for dense results. */
+.person.compact{display:grid;grid-template-columns:58px minmax(0,1fr) auto;gap:11px;padding:12px;align-items:center}
+.person.compact .pres .avatar{width:58px!important;height:58px!important;font-size:20px!important}
+.person.compact .bionote{display:none}
+.person.compact .who{gap:5px}
+@media(max-width:520px){.people .person{gap:10px;padding:12px}.people .person .pres .avatar{width:60px!important;height:60px!important;font-size:21px!important}.people .person .bionote{display:none}}
