@@ -2635,3 +2635,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .locask .locfacts li:last-child{border-bottom:0}
 .locask .locfacts li::before{top:8px;left:2px}
 .locask .pinart{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 14px;background:var(--accent-soft);border:1px solid var(--accent-border)}
+
+/* Prompt 27 — keep permission asks calm and explicit. */
+.locask>p{max-width:42ch;margin-inline:auto;line-height:1.65}
+.locask .actions{gap:8px}
+.locask .btn.primary{min-height:46px}
+.locask .btn.ghost{min-height:42px}
+#gate .fine{max-width:44ch;margin-inline:auto;line-height:1.6}
