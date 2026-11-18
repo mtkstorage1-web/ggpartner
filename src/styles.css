@@ -2541,3 +2541,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .modal.profedit input,.modal.profedit select,.modal.profedit textarea{min-height:42px}
 .modal.profedit textarea{line-height:1.55}
 .modal.profedit .pefoot,.modal.profedit .actions{position:sticky;bottom:-1px;background:var(--surface);padding-top:10px}
+
+/* Prompt 14 — surface lobby capacity and join actions. */
+.evcard{display:flex;flex-direction:column;gap:12px;padding:18px;border-left:3px solid var(--accent-border)}
+.evcard .evhead{align-items:flex-start;gap:12px}
+.evcard .evmeta{display:flex;flex-wrap:wrap;gap:7px 14px;line-height:1.5}
+.evcard .evslots{min-width:82px;padding:8px 10px;text-align:center;background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--accent-ink)}
+.evcard .btn{min-height:42px;align-self:flex-start}
+.evcard.isdone{opacity:.74;border-left-color:var(--border-strong)}
