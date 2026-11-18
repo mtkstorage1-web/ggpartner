@@ -2922,3 +2922,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 
 /* Prompt 73 — improve grouping and spacing in the desktop rail. */
 @media(min-width:900px){.sidenav{padding:20px 14px;gap:5px}.sidenav .brand{margin-bottom:8px;padding-bottom:16px;border-bottom:1px solid var(--border)}.sidenav .navlink{padding-inline:12px}.sidenav .navspacer{min-height:18px}}
+
+/* Prompt 74 — make notification banners readable without covering controls. */
+.notif{top:max(12px,env(safe-area-inset-top));max-width:min(440px,calc(100vw - 24px));padding:13px 16px;border-left:4px solid var(--accent);text-align:left}
+.notif .nt{font-size:12px;line-height:1.45}
+.notif .nb{white-space:normal;line-height:1.45}
+@media(max-width:520px){.notif{top:8px;max-width:calc(100vw - 18px)}}
