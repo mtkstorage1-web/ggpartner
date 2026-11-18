@@ -2734,3 +2734,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .drow1>.chip{min-height:38px}
 .fgrid{padding-top:12px;border-top:1px solid var(--border)}
 .fctl>span{letter-spacing:.08em}
+
+/* Prompt 42 — make applied filters easy to inspect and remove. */
+.fchips{align-items:center;padding:2px 0}
+.fchip{min-height:34px;padding:6px 10px}
+.fchip.clear{border-style:dashed}
+.fchip:focus-visible{outline-offset:3px}
+.dsearch:has(.fchips:not(:empty)) .fchips{padding-top:10px;border-top:1px solid var(--border)}
