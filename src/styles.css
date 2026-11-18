@@ -2870,3 +2870,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .evcard .evbar{height:8px;overflow:hidden;background:var(--surface-3);border:1px solid var(--border)}
 .evcard .evbar i{display:block;height:100%;background:var(--grad-gold);transition:width .2s ease}
 .evcard .evslots>span{font-size:11px;font-weight:750;white-space:nowrap}
+
+/* Prompt 64 — keep lobby participants compact and identifiable. */
+.evcard .evwho{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+.evcard .evpill{min-height:34px;padding:4px 8px;background:var(--surface-2);border:1px solid var(--border);font-size:10.5px}
+.evcard .evpill:hover{border-color:var(--accent-border);background:var(--accent-soft)}
+.evcard .evpill .avatar{width:24px!important;height:24px!important;font-size:9px!important}
