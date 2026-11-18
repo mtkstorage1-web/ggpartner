@@ -2439,3 +2439,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;
 }
 .notif:active{transform:translate(-50%,2px)}
+
+/* Prompt 01 — bring the Discover workspace into focus. */
+.discover .dbody{gap:18px}
+.discover .dscroll{padding:clamp(16px,2vw,28px)}
+.discover .resultbar{position:sticky;top:0;z-index:4;padding:12px 14px;margin:0 0 14px;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(12px);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.discover .people{gap:14px}
+.discover .drail{align-self:start;position:sticky;top:18px}
+@media(max-width:760px){.discover .dscroll{padding:12px}.discover .dbody{gap:10px}}
