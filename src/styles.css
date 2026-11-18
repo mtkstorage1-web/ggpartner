@@ -2622,3 +2622,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 #gate .gbtn:hover{transform:translateY(-1px);box-shadow:var(--glow)}
 #gate .gbtn:disabled{opacity:.7;cursor:wait;transform:none}
 #gate .ghost{min-height:42px}
+
+/* Prompt 25 — label the landing preview through presentation, not fake data. */
+.lshot{padding:12px}
+.lshot::before{content:"MATCH PREVIEW";display:block;width:max-content;margin:0 0 8px auto;padding:5px 9px;border:1px solid var(--accent-border);background:var(--surface);color:var(--accent-ink);font:700 10px var(--font-data);letter-spacing:.08em}
+.lshot-card{position:relative;z-index:1}
+.lshot-row{justify-content:flex-start;padding-left:clamp(0px,4vw,42px)}
