@@ -2845,3 +2845,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .daysep{position:sticky;top:0;z-index:1;padding:7px 0;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(6px)}
 .daysep span{padding:4px 9px;border:1px solid var(--border);background:var(--surface);font-size:10.5px}
 .bubble .t{margin-top:6px;font-size:10px;letter-spacing:.02em}
+
+/* Prompt 60 — keep message issues visible and recovery actions reachable. */
+.bubble .failed,.bubble .retry{color:var(--pass);font-weight:750}
+.chat .reccard{border-left:3px solid var(--pass);line-height:1.45}
+.chat .composer input:disabled{opacity:.6;cursor:not-allowed}
+.chat .composer .send:disabled{opacity:.5;cursor:not-allowed;box-shadow:none}
