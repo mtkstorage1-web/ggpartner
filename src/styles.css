@@ -3028,3 +3028,6 @@ html,body{max-width:100%;overflow-x:hidden}
 :where(.namebtn,.mcard h4,.evmain>b,.profmain>b,.row h4){min-width:0;overflow-wrap:anywhere}
 .person .line1{min-width:0}
 :where(.row .last,.chat .head .sub,.profmain small){max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* Prompt 95 — keep map and chat controls usable in short landscape viewports. */
+@media(max-height:520px) and (orientation:landscape){#map{height:52vh;min-height:220px}.chat{height:calc(100dvh - 18px)}.thread{padding-block:10px}.composer{padding-block:7px}.modal{max-height:96dvh}.callbox{padding:16px}.callacts{margin:12px 0}}
