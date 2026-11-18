@@ -2566,3 +2566,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .tabbar .navlink{min-height:52px}
 .tabbar .navlink[aria-current=page]{box-shadow:none}
 .tabbar .navlink:focus-visible{outline-offset:-3px}
+
+/* Prompt 17 — align surfaces, borders, and text across the interface. */
+.card,.panel,.locbar,.resultbar{border-color:var(--border-strong)}
+.panel,.card{box-shadow:var(--shadow-sm)}
+:where(.view h1,.view h2,.view h3){text-wrap:balance}
+:where(.hint,.sub,.profhint){line-height:1.55}
+:where(.btn,.actbtn,.railbtn,.navlink){transition-duration:.16s}
+:where(.card,.panel,.modal){--local-edge:color-mix(in srgb,var(--accent) 18%,var(--border));}
