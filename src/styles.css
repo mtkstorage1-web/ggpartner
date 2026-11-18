@@ -2958,3 +2958,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 /* Prompt 80 — keep motion optional and transitions brief. */
 :where(.card,.panel,.btn,.actbtn,.navlink,.row){transition-duration:.16s}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Prompt 81 — bring common panel spacing into alignment. */
+.view{--view-gap:16px}
+.view :where(.panel,.card,.empty){scroll-margin-top:18px}
+.profgrid,.view .grid,.view .list{gap:var(--view-gap)}
+.view :where(.panel,.card){min-width:0}
