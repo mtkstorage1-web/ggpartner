@@ -2887,3 +2887,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .evcard .evmeta{display:flex;flex-wrap:wrap;gap:7px 14px;font-variant-numeric:tabular-nums}
 .evcard .evmeta>span{display:inline-flex;align-items:center;gap:6px;padding:4px 0}
 .evcard .stoptimechip{font-variant-numeric:tabular-nums;font-weight:750}
+
+/* Prompt 67 — give the main lobby action a consistent target. */
+.evcard>.btn{min-height:42px;min-width:108px;padding-inline:14px}
+.evcard>.btn.primary{box-shadow:0 7px 18px -13px var(--accent)}
+.evcard>.btn.danger{border-color:color-mix(in srgb,var(--pass) 42%,var(--border));color:var(--pass)}
+.evcard>.btn:focus-visible{outline-offset:3px}
