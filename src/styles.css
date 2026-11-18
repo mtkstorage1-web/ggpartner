@@ -2628,3 +2628,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .lshot::before{content:"MATCH PREVIEW";display:block;width:max-content;margin:0 0 8px auto;padding:5px 9px;border:1px solid var(--accent-border);background:var(--surface);color:var(--accent-ink);font:700 10px var(--font-data);letter-spacing:.08em}
 .lshot-card{position:relative;z-index:1}
 .lshot-row{justify-content:flex-start;padding-left:clamp(0px,4vw,42px)}
+
+/* Prompt 26 — foreground the location privacy facts before sharing. */
+.locask .locfacts{padding:15px 16px;border:1px solid var(--border-strong);border-left:3px solid var(--like)}
+.locask .locfacts li{padding:7px 0 7px 24px;border-bottom:1px solid var(--border);line-height:1.5}
+.locask .locfacts li:last-child{border-bottom:0}
+.locask .locfacts li::before{top:8px;left:2px}
+.locask .pinart{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 14px;background:var(--accent-soft);border:1px solid var(--accent-border)}
