@@ -2840,3 +2840,8 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .chat .head .grow{display:flex;flex-direction:column;gap:3px}
 .chat .head .sub{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:50ch}
 .chat .head .icobtn{width:40px;height:40px;flex:none}
+
+/* Prompt 59 — distinguish day separators and message times. */
+.daysep{position:sticky;top:0;z-index:1;padding:7px 0;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(6px)}
+.daysep span{padding:4px 9px;border:1px solid var(--border);background:var(--surface);font-size:10.5px}
+.bubble .t{margin-top:6px;font-size:10px;letter-spacing:.02em}
