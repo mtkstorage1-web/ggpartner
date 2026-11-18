@@ -2876,3 +2876,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .evcard .evpill{min-height:34px;padding:4px 8px;background:var(--surface-2);border:1px solid var(--border);font-size:10.5px}
 .evcard .evpill:hover{border-color:var(--accent-border);background:var(--accent-soft)}
 .evcard .evpill .avatar{width:24px!important;height:24px!important;font-size:9px!important}
+
+/* Prompt 65 — make recruiting status and remaining places obvious. */
+.evcard .evphase{align-self:flex-start;min-height:26px;padding:5px 8px;font-weight:750}
+.evcard:has(.evphase) .evslots{border-left:3px solid var(--accent)}
+.evcard .evphase:has(i){display:inline-flex;align-items:center;gap:6px}
+.evcard .evphase i{width:7px;height:7px;background:var(--like);box-shadow:0 0 0 3px var(--like-soft)}
