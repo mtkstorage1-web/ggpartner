@@ -2864,3 +2864,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .modal:has([data-evcreate]) .pebody,.modal:has(#ev-title) .pebody{display:grid;gap:13px}
 .modal:has([data-evcreate]) .field,.modal:has(#ev-title) .field{margin-bottom:0}
 .modal .field :where(input,select,textarea){min-height:42px}
+
+/* Prompt 63 — make remaining lobby slots visible. */
+.evcard .evslots{display:grid;grid-template-columns:minmax(70px,1fr) auto;align-items:center;gap:10px;padding:9px 11px}
+.evcard .evbar{height:8px;overflow:hidden;background:var(--surface-3);border:1px solid var(--border)}
+.evcard .evbar i{display:block;height:100%;background:var(--grad-gold);transition:width .2s ease}
+.evcard .evslots>span{font-size:11px;font-weight:750;white-space:nowrap}
