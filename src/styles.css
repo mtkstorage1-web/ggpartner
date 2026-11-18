@@ -2720,3 +2720,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .clink{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:7px 10px;border:1px solid var(--border-strong);background:var(--surface-2);font-size:11.5px;font-weight:700}
 .clink:not(.off):hover{border-color:var(--accent-border);background:var(--accent-soft);color:var(--accent-ink)}
 .clink.off{opacity:.62;cursor:default}
+
+/* Prompt 40 — explain verification without overpowering profile names. */
+.vbadge{min-height:24px;padding:4px 8px;font-size:10.5px;font-weight:750}
+.vbadge .ic{width:13px;height:13px}
+.namebtn+.vbadge{flex:none}
+.vbadge.no{border-style:dashed}
+.vbadge:focus-visible{outline-offset:3px}
