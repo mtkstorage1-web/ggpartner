@@ -123,3 +123,16 @@ the app only prompts a reload when something actually changed.
 ./build.sh
 netlify deploy --dir=dist --prod
 ```
+
+## UI patterns
+
+The app uses a small set of shared patterns in `src/styles.css`:
+
+- **Navigation:** `.sidenav`, `.tabbar` and `.navlink` share active and focus states.
+- **Member cards:** `.person` and `.mcard` show public profiles and paired members.
+- **Activity and events:** `.chip`, `.profrow` and `.evcard` group category details and lobbies.
+- **Conversation:** `.chat`, `.bubble`, `.voice` and `.composer` cover messages and calls.
+- **Feedback:** `.empty`, `.toast`, `.notif` and `.modal` handle waiting, success and decision states.
+- **Theme:** root CSS variables define light and dark surfaces, text, borders and accents.
+
+When changing a shared pattern, keep its focus state, mobile sizing and both theme variants aligned.
