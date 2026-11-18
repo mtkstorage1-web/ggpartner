@@ -2655,3 +2655,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 @keyframes load-pulse{50%{opacity:.55;transform:translateY(-2px)}}
 .syncdot{padding:4px 8px;background:var(--like-soft);border:1px solid color-mix(in srgb,var(--like) 28%,var(--border));font-weight:650}
 @media(prefers-reduced-motion:reduce){.empty:has(.ic use[href="#i-hourglass"]) .big{animation:none}}
+
+/* Prompt 30 — make recovery guidance easy to notice. */
+#gate .err,.setup .note{border-left:3px solid var(--pass);padding:12px 14px;line-height:1.55;text-align:left}
+#gate .err{display:flex;align-items:flex-start;gap:8px}
+.setup .note{margin-top:12px;background:var(--pass-soft);color:var(--pass)}
+.field input[aria-invalid=true],.field textarea[aria-invalid=true],.field select[aria-invalid=true]{border-color:var(--pass);box-shadow:0 0 0 3px color-mix(in srgb,var(--pass) 14%,transparent)}
+@media(max-width:560px){#gate .err,.setup .note{font-size:12.5px}}
