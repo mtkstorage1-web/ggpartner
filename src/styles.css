@@ -2462,3 +2462,12 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .match-reason.good{color:var(--like);border-color:color-mix(in srgb,var(--like) 32%,var(--person-chip-border))}
 .match-reason .ic{width:12px;height:12px}
 @media(max-width:560px){.match-reasons{gap:4px}.match-reason{font-size:10px;padding:3px 6px}}
+
+/* Prompt 04 — make the selected activity unmistakable. */
+.drail{padding:12px;background:var(--surface);border:1px solid var(--border-strong)}
+.drail .railcats{gap:7px}
+.drail .railbtn{min-height:42px;padding:10px 12px;border:1px solid transparent}
+.drail .railbtn[aria-pressed=true]{background:var(--accent-soft);color:var(--accent-ink);border-color:var(--accent-border);box-shadow:inset 3px 0 0 var(--accent)}
+.drail .railbtn:hover{border-color:var(--border-strong);background:var(--surface-2)}
+.drail .addprof{margin-bottom:8px;min-height:44px}
+@media(max-width:760px){.drail{padding:8px}.drail .railbtn{min-height:40px;padding:8px 10px}}
