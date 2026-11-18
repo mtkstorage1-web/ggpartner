@@ -2689,3 +2689,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .daypick button[aria-pressed=true]{box-shadow:inset 0 -3px 0 var(--accent);font-weight:750}
 .daypick button:focus-visible{outline-offset:3px}
 @media(max-width:480px){.daypick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}.daypick button{width:100%}}
+
+/* Prompt 35 — keep availability summaries distinct from other metadata. */
+.person .meta .availability,.person .meta [title*=free]{color:var(--like);font-weight:700}
+.person .meta .ic{flex:none}
+.person .meta{row-gap:7px;column-gap:14px}
+.person .meta span{padding:2px 0}
