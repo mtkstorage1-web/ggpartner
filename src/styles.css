@@ -2701,3 +2701,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .person .tag{font-size:11px;line-height:1.4}
 .person .gstrip{display:flex;align-items:center;gap:7px;padding:7px 9px;background:var(--person-chip);border-left:2px solid var(--accent-border)}
 .person .detailpill{padding:8px 10px;background:var(--person-chip);border:1px solid var(--person-chip-border)}
+
+/* Prompt 37 — give profile editing sections room to breathe. */
+.profgrid .panel{gap:16px}
+.profgrid .field{gap:8px}
+.profgrid .field label{color:var(--text);font-size:12.5px}
+.profgrid .field input,.profgrid .field textarea{background:var(--surface-2)}
+.profgrid .profadd{padding-top:8px;border-top:1px solid var(--border)}
