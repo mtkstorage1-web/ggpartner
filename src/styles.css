@@ -2982,3 +2982,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .field :where(input,select,textarea)::placeholder{color:var(--faint);opacity:1}
 .field :where(input,select,textarea):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .field :where(input,select,textarea)[aria-invalid=true]{border-color:var(--pass)}
+
+/* Prompt 85 — give keyboard users a predictable focus path. */
+:focus-visible{scroll-margin:12px}
+.navlink:focus-visible,.railbtn:focus-visible,.chip:focus-visible{position:relative;z-index:4}
+.modal :focus-visible{outline-offset:2px}
+a:not([href]),button:not(:disabled){touch-action:manipulation}
