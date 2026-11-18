@@ -2904,3 +2904,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .discover .empty:has(.ic use[href="#i-calendar-days"]){max-width:620px;margin:26px auto;padding:clamp(24px,5vw,42px);border:1px dashed var(--border-strong);background:var(--surface)}
 .discover .empty:has(.ic use[href="#i-calendar-days"]) .btn.primary{min-height:44px;padding-inline:18px}
 .discover .empty:has(.ic use[href="#i-calendar-days"]) p{max-width:46ch;line-height:1.65}
+
+/* Prompt 70 — keep lobby cards consistent across list contexts. */
+.evcard{min-width:0;border:1px solid var(--border-strong);background:var(--surface);box-shadow:var(--shadow-sm)}
+.evcard .evtop,.evcard .evmeta,.evcard .evwho,.evcard .evslots{min-width:0}
+.evcard .evmain small{display:block;line-height:1.5;color:var(--muted)}
+.evcard .evtop>.evphase{flex:none}
