@@ -2828,3 +2828,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .callkey{width:58px;height:58px;border:2px solid color-mix(in srgb,var(--text) 16%,transparent)}
 .callkey.no{width:62px;height:62px}
 .callkey:focus-visible{outline-offset:4px}
+
+/* Prompt 57 — separate status text from call controls. */
+.callstate{min-height:22px;padding:5px 10px;margin:9px auto 0;width:max-content;max-width:100%;background:var(--surface-2);border:1px solid var(--border);font-weight:700}
+.callfine{max-width:38ch;margin:0 auto;line-height:1.6}
+.callui[hidden]{display:none!important}
+.callbox h2{text-wrap:balance}
