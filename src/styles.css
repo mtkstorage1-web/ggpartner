@@ -2782,3 +2782,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .mapwrap>.empty{max-width:660px;margin:14px auto;padding:24px;border:1px dashed var(--border-strong);background:var(--surface)}
 .mapwrap>.empty .big{width:48px;height:48px;margin:0 auto 10px;display:grid;place-items:center;background:var(--accent-soft)}
 .mapwrap>.empty p{max-width:46ch;line-height:1.6}
+
+/* Prompt 49 — make approximate distances easier to scan. */
+.person .meta{font-variant-numeric:tabular-nums}
+.person .meta>span:first-child{font-weight:700;color:var(--person-ink)}
+.person .meta .ic{width:14px;height:14px}
+.mcard .sub,.row .when{font-variant-numeric:tabular-nums}
