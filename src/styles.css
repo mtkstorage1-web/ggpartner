@@ -2471,3 +2471,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .drail .railbtn:hover{border-color:var(--border-strong);background:var(--surface-2)}
 .drail .addprof{margin-bottom:8px;min-height:44px}
 @media(max-width:760px){.drail{padding:8px}.drail .railbtn{min-height:40px;padding:8px 10px}}
+
+/* Prompt 05 — make next steps easy to spot in empty results. */
+.discover .empty{max-width:620px;margin:clamp(22px,5vh,56px) auto;padding:clamp(24px,5vw,44px);border:1px dashed var(--border-strong);background:color-mix(in srgb,var(--surface) 72%,transparent);text-align:center}
+.discover .empty .big{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 16px;background:var(--accent-soft);border:1px solid var(--accent-border)}
+.discover .empty p{max-width:420px;line-height:1.65}
+.discover .empty .btn{min-height:42px}
