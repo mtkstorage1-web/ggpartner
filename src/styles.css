@@ -2996,3 +2996,9 @@ a:not([href]),button:not(:disabled){touch-action:manipulation}
 :where(.btn,.chip,.navlink,.railbtn,.actbtn,.clink)>.ic,:where(.btn,.chip,.navlink,.railbtn,.actbtn,.clink) .ico>.ic{width:16px;height:16px;flex:none}
 :where(.meta,.evmeta,.pinfo,.dloc)>.ic{width:14px;height:14px;flex:none}
 :where(.icobtn,.roundbtn)>.ic{width:18px;height:18px}
+
+/* Prompt 88 — make card edges and spacing consistent. */
+:where(.card,.panel,.row,.evcard,.dsearch){border-color:var(--border-strong)}
+:where(.card,.panel,.evcard){box-shadow:var(--shadow-sm)}
+:where(.card,.panel){padding:clamp(14px,2vw,20px)}
+:where(.card,.panel,.evcard):hover{border-color:var(--accent-border)}
