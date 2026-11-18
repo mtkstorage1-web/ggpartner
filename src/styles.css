@@ -2525,3 +2525,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .bubble{max-width:min(78%,560px);padding:11px 14px;line-height:1.55}
 .composer{position:sticky;bottom:0;gap:10px;padding:12px clamp(12px,3vw,20px) max(12px,env(safe-area-inset-bottom));}
 @media(max-width:520px){.bubble{max-width:88%}.chat{height:calc(100dvh - var(--tabbar-h) - 24px)}}
+
+/* Prompt 12 — clarify the profile overview and its sections. */
+.profgrid{align-items:start;gap:18px}
+.profgrid>.panel{border:1px solid var(--border);background:var(--surface);box-shadow:var(--shadow-sm)}
+.profgrid .panel h3{padding-bottom:9px;border-bottom:1px solid var(--border);color:var(--accent-ink)}
+.profgrid .stats{gap:8px}
+.profgrid .stat{border:1px solid var(--border);padding:13px 8px}
+@media(max-width:819px){.profgrid{gap:12px}.profgrid>.panel{padding:15px}}
