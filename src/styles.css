@@ -2934,3 +2934,8 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .toast.show{border-left-color:var(--like)}
 .toast:empty{display:none}
 @media(max-width:560px){.toast{bottom:calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 12px);font-size:12px}}
+
+/* Prompt 76 — keep keyboard focus visible across all controls. */
+:where(button,a,input,select,textarea,[role=button],[role=switch]):focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+:where(button,a):disabled,[aria-disabled=true]{opacity:.56;cursor:not-allowed}
+:where(.chip,.tag,.btn,.actbtn,.navlink):active{filter:brightness(.96)}
