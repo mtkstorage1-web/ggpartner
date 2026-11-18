@@ -2670,3 +2670,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .profile-progress .progress-track{height:7px;margin:8px 0;background:var(--surface-3);border:1px solid var(--border)}
 .profile-progress .progress-track i{display:block;height:100%;background:var(--grad-gold)}
 .profile-progress small{display:block;color:var(--faint);font-size:10.5px;line-height:1.45}
+
+/* Prompt 32 — help members compare their profile with public cards. */
+.person.isme{border-style:dashed;border-color:var(--accent-border);background:color-mix(in srgb,var(--person) 92%,var(--accent-soft))}
+.person.isme::after{content:"YOUR PUBLIC CARD";align-self:flex-start;padding:4px 7px;background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--accent-ink);font:700 9px var(--font-data);letter-spacing:.06em}
+.person.isme .acts{align-self:center}
+@media(max-width:600px){.person.isme::after{grid-column:1/-1;grid-row:1}}
