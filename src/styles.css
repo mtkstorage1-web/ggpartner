@@ -2477,3 +2477,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .discover .empty .big{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 16px;background:var(--accent-soft);border:1px solid var(--accent-border)}
 .discover .empty p{max-width:420px;line-height:1.65}
 .discover .empty .btn{min-height:42px}
+
+/* Prompt 06 — unify the map canvas and its controls. */
+.mapwrap{gap:14px}
+.locbar{padding:15px 17px;border-left:3px solid var(--accent)}
+#mapslot{position:relative;overflow:hidden;border:1px solid var(--border-strong);box-shadow:var(--shadow-md)}
+#map{height:min(66vh,620px);min-height:360px;border:0}
+.maptools{padding:2px 0}
+@media(max-width:600px){#map{height:58vh;min-height:300px}.locbar{align-items:flex-start;padding:12px}}
