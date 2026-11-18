@@ -2642,3 +2642,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .locask .btn.primary{min-height:46px}
 .locask .btn.ghost{min-height:42px}
 #gate .fine{max-width:44ch;margin-inline:auto;line-height:1.6}
+
+/* Prompt 28 — make save confirmations visible without interrupting flow. */
+.toast{min-height:44px;max-width:min(520px,calc(100vw - 24px));padding:12px 18px;border-radius:0;border-left:4px solid var(--like);font-weight:700;line-height:1.45}
+.toast.show{animation:toast-in .22s steps(4,end)}
+@keyframes toast-in{from{transform:translate(-50%,8px);opacity:.4}to{transform:translate(-50%,0);opacity:1}}
+@media(prefers-reduced-motion:reduce){.toast.show{animation:none}}
