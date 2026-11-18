@@ -2574,3 +2574,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 :where(.hint,.sub,.profhint){line-height:1.55}
 :where(.btn,.actbtn,.railbtn,.navlink){transition-duration:.16s}
 :where(.card,.panel,.modal){--local-edge:color-mix(in srgb,var(--accent) 18%,var(--border));}
+
+/* Prompt 18 — keep the light theme soft while preserving readable cards. */
+:root[data-theme=light]{--person:linear-gradient(150deg,#fff,#f8f9fd);--person-border:#d7ddeb;--person-ink:#171c29;--person-sub:#566078;--person-chip:rgba(15,20,32,.045);--person-chip-border:rgba(15,20,32,.12);--shadow-sm:0 2px 8px rgba(31,39,60,.07);--shadow-md:0 16px 34px -22px rgba(31,39,60,.38)}
+:root[data-theme=light] .sidenav,:root[data-theme=light] .tabbar{background:color-mix(in srgb,var(--surface) 94%,#e9edfa)}
+:root[data-theme=light] .person{box-shadow:0 4px 18px rgba(38,46,66,.06)}
+:root[data-theme=light] .empty{background:color-mix(in srgb,var(--surface) 88%,var(--bg))}
