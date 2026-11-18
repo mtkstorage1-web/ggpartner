@@ -2588,3 +2588,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .modal .pefoot{display:flex;gap:9px;justify-content:flex-end;padding-top:13px;margin-top:14px;border-top:1px solid var(--border)}
 .modal .pefoot .btn.primary{min-width:120px}
 @media(max-width:520px){.scrim{padding:10px}.modal{max-height:94dvh}.modal .pefoot{position:sticky;bottom:0;background:var(--surface)}}
+
+/* Prompt 20 — prevent cramped controls and overflow across breakpoints. */
+.view{min-width:0}
+.view :where(.grid,.people,.list,.profgrid,.dscroll){min-width:0}
+.view :where(button,input,select,textarea){max-width:100%}
+@media(max-width:760px){.view{padding-inline:clamp(10px,3vw,18px)}.dmode,.resultbar{gap:10px}.dmode .modesub{max-width:38ch}}
+@media(max-width:480px){.view{padding-inline:10px}.view .grid{grid-template-columns:minmax(0,1fr)}.view .people>.person{grid-template-columns:64px minmax(0,1fr)}.view .people .acts{grid-column:1/-1;display:flex;justify-content:flex-end}}
