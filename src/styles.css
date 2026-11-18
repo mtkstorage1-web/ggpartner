@@ -3023,3 +3023,8 @@ html,body{max-width:100%;overflow-x:hidden}
 .person .who{max-width:100%}
 .profgrid .panel>p{max-width:68ch;line-height:1.7}
 .proflist{gap:9px}
+
+/* Prompt 94 — let long labels wrap before they break card layouts. */
+:where(.namebtn,.mcard h4,.evmain>b,.profmain>b,.row h4){min-width:0;overflow-wrap:anywhere}
+.person .line1{min-width:0}
+:where(.row .last,.chat .head .sub,.profmain small){max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
