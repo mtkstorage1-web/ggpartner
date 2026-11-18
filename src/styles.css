@@ -2708,3 +2708,9 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .profgrid .field label{color:var(--text);font-size:12.5px}
 .profgrid .field input,.profgrid .field textarea{background:var(--surface-2)}
 .profgrid .profadd{padding-top:8px;border-top:1px solid var(--border)}
+
+/* Prompt 38 — keep photo controls and fallback avatars cohesive. */
+.photopick{display:flex;align-items:center;gap:14px;width:100%;padding:14px;background:var(--surface-2);border:1px dashed var(--border-strong)}
+.photopick .avatar,.avatar.photo{border:2px solid var(--border-strong);object-fit:cover}
+.photopick .btn{min-height:38px}
+.photopick input[type=file]{max-width:100%;font-size:11px}
