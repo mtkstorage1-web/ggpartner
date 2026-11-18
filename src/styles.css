@@ -3054,3 +3054,9 @@ img.avatar.photo{object-fit:cover;background:var(--surface-3);color:transparent}
 :root[data-theme=dark] :where(.mapstyle,.leaflet-control-zoom a){--control-surface:var(--surface)}
 :root[data-theme=light] .mapstyle,:root[data-theme=dark] .mapstyle{border-color:var(--border-strong)}
 :where(.field input,.field textarea,.field select,.search input,.composer input){color:var(--text);background-color:var(--surface-2)}
+
+/* Prompt 100 — final alignment for shared controls and content surfaces. */
+:where(.person,.evcard,.mcard,.row,.dsearch,.panel){color:var(--text);border-color:var(--border-strong)}
+:where(.person,.evcard,.mcard,.row,.dsearch,.panel,.modal){box-shadow:var(--shadow-sm)}
+:where(.btn,.actbtn,.chip,.railbtn,.navlink,.icobtn){line-height:1.35;touch-action:manipulation}
+@media(max-width:520px){:where(.person,.evcard,.mcard,.row,.panel){border-radius:0}}
