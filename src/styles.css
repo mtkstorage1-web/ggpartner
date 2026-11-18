@@ -2741,3 +2741,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .fchip.clear{border-style:dashed}
 .fchip:focus-visible{outline-offset:3px}
 .dsearch:has(.fchips:not(:empty)) .fchips{padding-top:10px;border-top:1px solid var(--border)}
+
+/* Prompt 43 — keep search comfortable for typing and clearing. */
+.drow1 .search{min-height:44px}
+.drow1 .search input{height:44px;padding-left:40px}
+.drow1 .search .mag{left:13px;display:grid;place-items:center;width:18px;height:18px}
+.drow1 .sort,.drow1 .sel{min-height:42px}
+.drow1 .search input::-webkit-search-cancel-button{cursor:pointer}
