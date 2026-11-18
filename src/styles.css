@@ -3043,3 +3043,8 @@ html,body{max-width:100%;overflow-x:hidden}
 .person.compact .bionote{display:none}
 .person.compact .who{gap:5px}
 @media(max-width:520px){.people .person{gap:10px;padding:12px}.people .person .pres .avatar{width:60px!important;height:60px!important;font-size:21px!important}.people .person .bionote{display:none}}
+
+/* Prompt 98 — keep avatar image slots tidy when a photo is unavailable. */
+.avatar{display:inline-grid;place-items:center;flex:none;overflow:hidden;background-color:var(--surface-3);color:var(--text)}
+img.avatar.photo{object-fit:cover;background:var(--surface-3);color:transparent}
+.avatar:not(img){font-weight:800;letter-spacing:.02em}
