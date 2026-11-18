@@ -2788,3 +2788,6 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .person .meta>span:first-child{font-weight:700;color:var(--person-ink)}
 .person .meta .ic{width:14px;height:14px}
 .mcard .sub,.row .when{font-variant-numeric:tabular-nums}
+
+/* Prompt 50 — keep map controls reachable on narrow screens. */
+@media(max-width:600px){.mapstyle{top:8px;right:8px;left:auto;max-width:calc(100% - 16px);padding:2px}.mapstyle button{min-height:38px;padding:7px 9px}.leaflet-control-zoom{margin:10px!important}.leaflet-control-attribution{max-width:68vw;font-size:9px!important}.maptools .sel{min-height:42px;width:min(100%,240px)}}
