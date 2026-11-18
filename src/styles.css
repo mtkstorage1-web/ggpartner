@@ -2509,3 +2509,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .mcard h4{font-size:15px;color:var(--text)}
 .mcard .tags{margin-top:auto}
 .mcard:focus-visible{outline-offset:4px}
+
+/* Prompt 10 — improve message preview hierarchy in the chat list. */
+.view:has(>.list) .list{max-width:860px;gap:9px}
+.view:has(>.list) .row{min-height:76px;padding:13px 16px;border-left:3px solid transparent}
+.view:has(>.list) .row:has(.dot){border-left-color:var(--accent);background:color-mix(in srgb,var(--accent-soft) 45%,var(--surface))}
+.view:has(>.list) .row .last{max-width:68ch;line-height:1.45}
+.view:has(>.list) .row .when{padding-top:3px;font-variant-numeric:tabular-nums}
+@media(max-width:520px){.view:has(>.list) .row{padding:11px 12px}.view:has(>.list) .row .when{font-size:10px}}
