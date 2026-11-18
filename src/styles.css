@@ -3031,3 +3031,8 @@ html,body{max-width:100%;overflow-x:hidden}
 
 /* Prompt 95 — keep map and chat controls usable in short landscape viewports. */
 @media(max-height:520px) and (orientation:landscape){#map{height:52vh;min-height:220px}.chat{height:calc(100dvh - 18px)}.thread{padding-block:10px}.composer{padding-block:7px}.modal{max-height:96dvh}.callbox{padding:16px}.callacts{margin:12px 0}}
+
+/* Prompt 96 — keep dialog headings and actions reachable on small displays. */
+@media(max-height:620px){.scrim{align-items:flex-start;overflow-y:auto}.modal{max-height:calc(100dvh - 20px);margin:auto 0}.modal .pehead{top:-1px}.modal .pefoot{bottom:-1px}}
+.modal .pehead{display:flex;align-items:center;gap:12px}
+.modal .pehead h2{min-width:0;flex:1}
