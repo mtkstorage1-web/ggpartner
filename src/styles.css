@@ -2549,3 +2549,12 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .evcard .evslots{min-width:82px;padding:8px 10px;text-align:center;background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--accent-ink)}
 .evcard .btn{min-height:42px;align-self:flex-start}
 .evcard.isdone{opacity:.74;border-left-color:var(--border-strong)}
+
+/* Prompt 15 — clarify the landing page's first decision. */
+.lhero{padding:clamp(42px,7vw,88px) 0 54px;background:radial-gradient(ellipse at 75% 28%,color-mix(in srgb,var(--violet) 11%,transparent),transparent 42%)}
+.lherogrid{gap:clamp(28px,6vw,72px)}
+#landing h1{max-width:13ch;line-height:1.15}
+.llead{max-width:52ch;line-height:1.7}
+.lbtns .btn.primary{min-height:50px;box-shadow:0 8px 24px -12px var(--accent)}
+.lshot-card{transform:rotate(-1deg)}
+@media(max-width:900px){#landing h1{max-width:16ch}}
