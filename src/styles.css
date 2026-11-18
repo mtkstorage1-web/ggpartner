@@ -2991,3 +2991,8 @@ a:not([href]),button:not(:disabled){touch-action:manipulation}
 
 /* Prompt 86 — remove decorative motion when reduced motion is requested. */
 @media(prefers-reduced-motion:reduce){.lshot-card,.leyebrow .pulse,.callkey.yes,.leaflet-marker-icon,.modal{animation:none!important;scroll-behavior:auto!important}.card:hover,.lcat:hover,.lfacts li:hover,.stat:hover{transform:none!important}}
+
+/* Prompt 87 — align icons across controls and metadata. */
+:where(.btn,.chip,.navlink,.railbtn,.actbtn,.clink)>.ic,:where(.btn,.chip,.navlink,.railbtn,.actbtn,.clink) .ico>.ic{width:16px;height:16px;flex:none}
+:where(.meta,.evmeta,.pinfo,.dloc)>.ic{width:14px;height:14px;flex:none}
+:where(.icobtn,.roundbtn)>.ic{width:18px;height:18px}
