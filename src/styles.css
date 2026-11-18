@@ -2882,3 +2882,8 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .evcard:has(.evphase) .evslots{border-left:3px solid var(--accent)}
 .evcard .evphase:has(i){display:inline-flex;align-items:center;gap:6px}
 .evcard .evphase i{width:7px;height:7px;background:var(--like);box-shadow:0 0 0 3px var(--like-soft)}
+
+/* Prompt 66 — align event times and durations for quick reading. */
+.evcard .evmeta{display:flex;flex-wrap:wrap;gap:7px 14px;font-variant-numeric:tabular-nums}
+.evcard .evmeta>span{display:inline-flex;align-items:center;gap:6px;padding:4px 0}
+.evcard .stoptimechip{font-variant-numeric:tabular-nums;font-weight:750}
