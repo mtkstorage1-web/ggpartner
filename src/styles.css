@@ -2763,3 +2763,10 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 #map .leaflet-marker-icon:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 #map.sat .leaflet-marker-icon{filter:drop-shadow(0 0 4px rgba(0,0,0,.8))}
 @media(prefers-reduced-motion:reduce){#map .leaflet-marker-icon{transition:none}}
+
+/* Prompt 46 — make the map and member-browse destinations feel paired. */
+.navlink[data-nav=discover],.navlink[data-nav=map]{position:relative}
+.navlink[data-nav=discover]+.navlink[data-nav=map]{margin-top:3px}
+.navlink[data-nav=discover]:hover,.navlink[data-nav=map]:hover{background:color-mix(in srgb,var(--accent-soft) 60%,var(--surface-2))}
+.view:has(>.mapwrap) .chiprow{padding:5px 0 9px;scroll-snap-type:x proximity}
+.view:has(>.mapwrap) .chiprow>.chip{scroll-snap-align:start;flex:none}
