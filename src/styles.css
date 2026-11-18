@@ -2447,3 +2447,11 @@ img,.avatar img,.lshot img{image-rendering:pixelated}
 .discover .people{gap:14px}
 .discover .drail{align-self:start;position:sticky;top:18px}
 @media(max-width:760px){.discover .dscroll{padding:12px}.discover .dbody{gap:10px}}
+
+/* Prompt 02 — improve scan order on member cards. */
+.people .person{align-items:flex-start;gap:18px;padding:20px;border-color:color-mix(in srgb,var(--person-border) 82%,var(--border))}
+.person .who{gap:9px}
+.person .line1{row-gap:7px}
+.person .meta span{display:inline-flex;align-items:center;gap:5px}
+.person .headline{font-size:14px;line-height:1.45}
+@media(max-width:620px){.people .person{gap:12px;padding:14px}.people .pres .avatar{width:76px!important;height:76px!important;font-size:26px!important}.person .acts{gap:7px}}
