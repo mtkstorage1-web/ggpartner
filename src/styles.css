@@ -3060,3 +3060,24 @@ img.avatar.photo{object-fit:cover;background:var(--surface-3);color:transparent}
 :where(.person,.evcard,.mcard,.row,.dsearch,.panel,.modal){box-shadow:var(--shadow-sm)}
 :where(.btn,.actbtn,.chip,.railbtn,.navlink,.icobtn){line-height:1.35;touch-action:manipulation}
 @media(max-width:520px){:where(.person,.evcard,.mcard,.row,.panel){border-radius:0}}
+
+/* Skeleton loading — render placeholders only during live data waits. */
+.skeleton-stack{display:grid;gap:12px;max-width:920px;margin:0 auto}
+.skeleton-person{display:flex;align-items:center;gap:18px;min-height:142px;padding:18px;background:var(--person);border:1px solid var(--person-border)}
+.skeleton-shape{display:block;overflow:hidden;background:linear-gradient(100deg,var(--surface-2) 20%,var(--surface-3) 38%,var(--surface-2) 56%);background-size:220% 100%;animation:skeleton-shimmer 1.35s ease-in-out infinite}
+.skeleton-avatar{width:82px;height:82px;flex:0 0 82px}
+.skeleton-copy{display:grid;flex:1;gap:10px;min-width:0}
+.skeleton-copy i{height:10px}
+.skeleton-name{width:min(34%,190px);height:17px!important}
+.skeleton-meta{width:min(54%,320px)}
+.skeleton-line{width:min(78%,520px);height:14px!important}
+.skeleton-tags{width:min(42%,250px);height:22px!important;margin-top:3px}
+@keyframes skeleton-shimmer{to{background-position-x:-220%}}
+#mapslot{isolation:isolate}
+.map-skeleton[hidden]{display:none}
+.map-skeleton{position:absolute;inset:0;z-index:450;overflow:hidden;pointer-events:none;background-color:var(--surface-2);background-image:linear-gradient(25deg,transparent 48%,color-mix(in srgb,var(--surface-3) 75%,transparent) 49%,color-mix(in srgb,var(--surface-3) 75%,transparent) 51%,transparent 52%),linear-gradient(145deg,transparent 36%,color-mix(in srgb,var(--surface-3) 68%,transparent) 37%,color-mix(in srgb,var(--surface-3) 68%,transparent) 39%,transparent 40%),linear-gradient(90deg,var(--surface-2),var(--surface-3),var(--surface-2));background-size:100% 100%,100% 100%,220% 100%;animation:skeleton-shimmer 1.6s ease-in-out infinite}
+.map-skeleton-road{position:absolute;display:block;height:10px;width:60%;background:color-mix(in srgb,var(--surface) 90%,transparent);border:1px solid var(--border-strong);transform:rotate(-18deg);top:38%;left:18%}
+.map-skeleton-road.road-b{top:64%;left:42%;width:48%;transform:rotate(24deg)}
+.map-skeleton-pin{position:absolute;top:48%;left:54%;width:20px;height:20px;background:var(--accent);border:4px solid var(--surface);box-shadow:0 2px 8px rgba(0,0,0,.35);transform:rotate(45deg)}
+@media(max-width:600px){.skeleton-person{min-height:120px;padding:13px;gap:12px}.skeleton-avatar{width:62px;height:62px;flex-basis:62px}.map-skeleton-road{height:7px}}
+@media(prefers-reduced-motion:reduce){.skeleton-shape,.map-skeleton{animation:none;background-position:50% 50%}}

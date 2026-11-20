@@ -1738,7 +1738,14 @@ function emptyListHTML() {
         '<p>' + esc(cloud.error) + '</p></div>';
     }
     if (!directoryLoaded) {
-      return '<div class="empty"><div class="big">' + ic('hourglass') + '</div><h3>Loading members\u2026</h3></div>';
+      return '<div class="skeleton-stack" role="status" aria-live="polite" aria-label="Loading members">' +
+        '<span class="sr">Loading members</span>' +
+        [0, 1, 2].map(function () {
+          return '<article class="skeleton-person" aria-hidden="true"><span class="skeleton-shape skeleton-avatar"></span>' +
+            '<span class="skeleton-copy"><i class="skeleton-shape skeleton-name"></i>' +
+            '<i class="skeleton-shape skeleton-meta"></i><i class="skeleton-shape skeleton-line"></i>' +
+            '<i class="skeleton-shape skeleton-tags"></i></span></article>';
+        }).join("") + '</div>';
     }
     return '<div class="empty">' +
       '<div class="big">' + ic('sprout') + '</div><h3>You are the first one here</h3>' +
@@ -2528,7 +2535,7 @@ function closeModal() {
    8b. MAP (Google Maps JavaScript API)
    ================================================================== */
 
-var maps = { status: "idle", error: "", map: null, tiles: null, labels: null, markers: [], mine: null };
+var maps = { status: "idle", error: "", map: null, tiles: null, labels: null, markers: [], mine: null, loadingTimer: null };
 
 /* Leaflet is loaded from a CDN in the <head>. If the network blocked
    it, window.L will be missing and we show a message instead. */
@@ -2566,7 +2573,7 @@ function viewMap() {
     '<div class="maptools">' + radiusSelectHTML() +
       '<span class="hint" id="mapcount"></span></div>' +
     '<div class="chiprow">' + chips + '</div>' +
-    '<div id="mapslot"><div id="map"></div>' + mapStyleHTML() + '</div>' +
+    '<div id="mapslot"><div id="map-skeleton" class="map-skeleton" role="status" aria-live="polite"><span class="sr">Loading map tiles</span><i class="map-skeleton-road road-a"></i><i class="map-skeleton-road road-b"></i><i class="map-skeleton-pin"></i></div><div id="map"></div>' + mapStyleHTML() + '</div>' +
   '</div></div>';
 }
 
@@ -2598,6 +2605,7 @@ function initMap() {
      Tearing it down on every repaint is what made the map flicker and
      snap back to your own pin mid-drag. */
   if (maps.map && maps.map.getContainer() === host) {
+    setMapLoading(false);
     maps.map.invalidateSize();
     paintMarkers(false);
     return;
@@ -2606,6 +2614,7 @@ function initMap() {
   /* A different container (the view was re-rendered): retire the old
      map first, since Leaflet refuses to reuse one. */
   if (maps.map) { maps.map.remove(); maps.map = null; }
+  setMapLoading(true);
   host.innerHTML = "";
 
   maps.map = L.map(host, {
@@ -2629,6 +2638,15 @@ function initMap() {
 
 /* Swap the tile layer rather than restyling: light and dark are two
    different tile sets. */
+function setMapLoading(loading) {
+  if (maps.loadingTimer) { clearTimeout(maps.loadingTimer); maps.loadingTimer = null; }
+  var slot = byId("mapslot");
+  var skeleton = byId("map-skeleton");
+  if (!slot || !skeleton) return;
+  skeleton.hidden = !loading;
+  slot.classList.toggle("is-loading", !!loading);
+  if (loading) maps.loadingTimer = setTimeout(function () { setMapLoading(false); }, 12000);
+}
 function addTiles() {
   if (!maps.map) return;
   if (maps.tiles) { maps.map.removeLayer(maps.tiles); maps.tiles = null; }
@@ -2642,7 +2660,7 @@ function addTiles() {
     maxZoom: t.maxZoom || 19,
     /* Neither Esri nor OSM standard serve @2x tiles; asking 404s. */
     detectRetina: !sat && t.retina !== false
-  }).addTo(maps.map);
+  }).once("load", function () { setMapLoading(false); }).addTo(maps.map);
 
   /* Place names over the imagery, so you can still tell where you are. */
   if (sat && t.labels) {
@@ -2659,6 +2677,7 @@ function addTiles() {
 
 function setMapStyle(style) {
   if (state.mapStyle === style) return;
+  setMapLoading(true);
   state.mapStyle = style;
   save();
   addTiles();
